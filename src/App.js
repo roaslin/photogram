@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import React from 'react';
+import Toolbar from '@mui/material/Toolbar';
 import './App.css';
+import CustomAppBar from './components/CustomAppBar';
+import Post from './components/Post';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <CustomAppBar />
+      {/* To make visible the contents under the AppBar check this out, that's why we need that extra Toolbar Component
+      https://mui.com/material-ui/react-app-bar/ */}
+      <Toolbar />
+      <Post />
+      <Post />
+      <Post />
+    </React.Fragment>
   );
 }
 
