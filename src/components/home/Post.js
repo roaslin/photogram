@@ -35,7 +35,7 @@ const Post = () => {
         <MessageOutlinedIcon sx={{ marginLeft: 2 }} />
         <SendOutlinedIcon sx={{ marginLeft: 2 }} />
       </Toolbar>
-      <Typography className='post_likes' sx={{ marginLeft: 1  }}>
+      <Typography className='post_likes' sx={{ marginLeft: 1 }}>
         456 Likes
       </Typography>
       <Typography className='post_caption' sx={{ marginLeft: 1 }}>

@@ -6,7 +6,7 @@ import './CustomAppBar.css';
 
 const CustomAppBar = () => {
   return (
-    <AppBar>
+    <AppBar className='custom_appbar'>
       <Toolbar>
         <Grid container>
           <Grid item xs={4}>

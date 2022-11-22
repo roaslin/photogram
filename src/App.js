@@ -1,20 +1,30 @@
 import React from 'react';
-import Toolbar from '@mui/material/Toolbar';
+import Home from './components/home/Home';
+import Login from './components/Login';
 import './App.css';
-import CustomAppBar from './components/CustomAppBar';
-import Post from './components/Post';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
 
 function App() {
+  const token = null;
+
+  if (!token) {
+    return (
+      <div className='login_form'>
+        <CssBaseline />
+        <Login />
+      </div>
+    );
+  }
+
   return (
-    <React.Fragment>
-      <CustomAppBar />
-      {/* To make visible the contents under the AppBar check this out, that's why we need that extra Toolbar Component
-      https://mui.com/material-ui/react-app-bar/ */}
-      <Toolbar />
-      <Post />
-      <Post />
-      <Post />
-    </React.Fragment>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
