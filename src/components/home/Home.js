@@ -3,8 +3,6 @@ import Toolbar from '@mui/material/Toolbar';
 import CustomAppBar from '../CustomAppBar';
 import Post from './Post';
 
-import TextField from '@mui/material/TextField';
-
 const Home = () => {
   return (
     <React.Fragment>
